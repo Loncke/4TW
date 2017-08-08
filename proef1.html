@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>proef1</title>
+    <script>
+      function generateAnswer(){
+        var x = document.getElementById("ingeven").value;
+        if (isNaN(x)){
+          alert("Must input numbers");
+          return false;
+        } else {
+        	var precision = getPrecision(x);
+			document.getElementById("out").innerHTML=Number(x/55,8).toFixed(precision);
+        }
+      }
+      
+	  function getPrecision(a) {
+      	if (a.indexOf(".")==-1){
+        	return 0
+        } else {
+        	return a.split(".")[1].length;
+        }
+      }
+      
+    </script>
+  </head>
+<body>
+
+<p>
+<input type="text" id="ingeven"/>
+
+<input type='button' value="Genereer antwoord" onClick='generateAnswer()'/>
+</p>
+<p id="out">
+</p>
+
+</body>
+</html>
