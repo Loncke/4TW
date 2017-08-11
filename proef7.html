@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>proef5</title>
+    <script>
+      function generateAnswer(){
+        var x = document.getElementById("ingeven").value;
+        x = x.replace(",",".");
+        if (isNaN(x) ){
+          alert("Gebruik cijfers");
+          return false;
+        } else {
+        	var answerX = x / 253.8 * 22.4;
+          document.getElementById("out1").innerHTML="Door sublimatie kan " + answerX + "l gasvormig I2 gevormd worden.";
+        }
+      }
+      
+    </script>
+  </head>
+<body>
+
+<p>
+Voer de massa dijood in.  <input type="text" id="ingeven"/>g
+</p>
+<p>
+  <input type='button' value="Indienen" onClick='generateAnswer()'/>
+</p>
+<p id="out1"/>
+<p id="out2"/>
+<p id="out3"/>
+
+</body>
+</html>
