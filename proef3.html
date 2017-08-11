@@ -9,7 +9,9 @@
           return false;
         } else {
         	var precision = getPrecision(x);
-					document.getElementById("out").innerHTML="Het suikerklontje bevat "+setPrecision(Number(x/342),precision)+" mol suiker.";
+          var answer = Number(Math.pow(10,23)*x/58.5*6.02);
+          var answerPrecise = setPrecision(answer,precision);
+					document.getElementById("out").innerHTML="De maatbeker bevat "+answerPrecise+" moleculen natriumchloride";
         }
       }
       
@@ -39,7 +41,7 @@
       	}
         return a.length;
       }
-      
+
       // arrived here, we are sure that it is a regular number, without 0's before or 0's after the .
       if (a == null || a.indexOf(".")==-1){
         // return length if it's no decimals
