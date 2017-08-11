@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>proef5</title>
+    <script>
+      function generateAnswer(){
+        var x = document.getElementById("ingeven1").value;
+        var y = document.getElementById("ingeven2").value;
+        x = x.replace(",",".");
+        y = y.replace(",",".");
+        if (isNaN(x) || isNaN(y)){
+          alert("Gebruik cijfers");
+          return false;
+        } else {
+        	var answerX = x / 207.2 * 6.02*Math.pow(10,23);
+          var answerY = y / 63.5 * 6.02*Math.pow(10,23);
+          document.getElementById("out1").innerHTML="het loodplaatje bevat " + answerX + " atomen lood";
+          document.getElementById("out2").innerHTML= " het koperplaatje bevat " + answerY + " atomen koper";
+          if( answerX > answerY){
+						document.getElementById("out3").innerHTML="In het loodplaatje zitten dus de meeste atomen";
+          } else {
+          document.getElementById("out3").innerHTML="In het koperplaatje zitten dus de meeste atomen";
+          }
+        }
+      }
+      
+    </script>
+  </head>
+<body>
+
+<p>
+Wat is de massa van het loodplaatje?  <input type="text" id="ingeven1"/>g
+</p>
+<p>
+  Wat is de massa van het koperplaatje? <input type="text" id="ingeven2"/>g
+</p>
+<p>
+  <input type='button' value="Indienen" onClick='generateAnswer()'/>
+</p>
+<p id="out1"/>
+<p id="out2"/>
+<p id="out3"/>
+
+</body>
+</html>
