@@ -8,47 +8,9 @@
           alert("Gebruik cijfers (als het een kommagetal is gebruik punten)");
           return false;
         } else {
-        	var precision = getPrecision(x);
-					document.getElementById("out").innerHTML="De nagel bevat "+setPrecision(Number(x/55.8),precision)+" mol ijzer.";
+					document.getElementById("out").innerHTML="De nagel bevat "+Number(x/55.8)+" mol ijzer.";
         }
       }
-      
-    function setPrecision(b,precision){
-      var before = String(b).split(".")[0];
-      var newPrecision = precision-before.length
-      if( newPrecision > 0 && newPrecision < 20){
-      	return b.toFixed(newPrecision);
-      } else {
-      	return Math.round(b);
-      }
-    }
-      
-	  function getPrecision(a) {
-   		if(a==0 || a == null){
-      	return 0;
-      }
-    	// remove leading 0
-      while(a !== null && a.length > 0 && a.charAt(0) == '0'){
-      	a = a.substring(1, a.length-1);
-      }
-      // remove leading 0 after .
-      if(a.charAt(0)=='.'){
-      	a = a.substring(1, a.length-1);
-      	while(a !== null && a.length > 0 && a.charAt(0) == '0'){
-      		a = a.substring(1, a.length-1);
-      	}
-        return a.length;
-      }
-      
-      // arrived here, we are sure that it is a regular number, without 0's before or 0's after the .
-      if (a == null || a.indexOf(".")==-1){
-        // return length if it's no decimals
-        return a.length;
-      } else {
-      	// if it's decimals, we have to count both
-        return (a.length-1);
-      }
-    }
       
     </script>
   </head>
