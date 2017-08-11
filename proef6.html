@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>proef6</title>
+    <script>
+      function generateAnswer(){
+					document.getElementById("out1").innerHTML="a) H2, O2, NH3"
+          document.getElementById("out2").innerHTML="b) normomstandigheden, dwz T = 273 K, p = 1013 hPa"
+          document.getElementById("out3").innerHTML="c) 0,893 g H2, 14,3 g O2, 7, 59 g NH3"
+      }
+    </script>
+  </head>
+<body>
+  <p>
+    Klik pas op ok als je zowel deelvragen a, b als c beantwoord hebt.
+   </p>
+  <p>
+    <input type='button' value="OK" onClick='generateAnswer()'/>
+  </p>
+  <p id="out1"/>
+  <p id="out2"/>
+  <p id="out3"/>
+</body>
+</html>
