@@ -4,8 +4,9 @@
     <script>
       function generateAnswer(){
         var x = document.getElementById("ingeven").value;
+        x = x.replace(",", ".");
         if (isNaN(x)){
-          alert("Gebruik cijfers (als het een kommagetal is gebruik punten)");
+          alert("Gebruik cijfers");
           return false;
         } else {
 					document.getElementById("out").innerHTML="De nagel bevat "+Number(x/55.8)+" mol ijzer.";
