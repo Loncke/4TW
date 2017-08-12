@@ -9,7 +9,7 @@
           alert("Gebruik cijfers");
           return false;
         } else {
-					document.getElementById("out").innerHTML="De nagel bevat "+Number(x/55.8)+" mol ijzer.";
+					document.getElementById("out").innerHTML="De nagel bevat "+Number(x/55.8).toString().replace('.',',')+" mol ijzer.";
         }
       }
       
