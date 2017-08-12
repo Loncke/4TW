@@ -9,7 +9,7 @@
           alert("Gebruik cijfers");
           return false;
         } else {
-					document.getElementById("out").innerHTML="Het suikerklontje bevat "+Number(x/342)+" mol suiker.";
+					document.getElementById("out").innerHTML="Het suikerklontje bevat "+Number(x/342).toString().replace('.',',')+" mol suiker.";
         }
       }
     </script>
