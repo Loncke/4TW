@@ -10,7 +10,7 @@
           return false;
         } else {
         	var answerX = x / 253.8 * 22.4;
-          document.getElementById("out1").innerHTML="Door sublimatie kan " + answerX + "l gasvormig I2 gevormd worden.";
+          document.getElementById("out1").innerHTML="Door sublimatie kan " + answerX.toString().replace('.',',') + "l gasvormig I2 gevormd worden.";
         }
       }
       
