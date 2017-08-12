@@ -10,7 +10,7 @@
           return false;
         } else {
         	var answerX = 18*6.02*Math.pow(10,23);
-          document.getElementById("out1").innerHTML="De maatbeker bevat  " + answerX + " moleculen water.";
+          document.getElementById("out1").innerHTML="De maatbeker bevat  " + answerX.toString().replace('.',',') + " moleculen water.";
         }
       }
       
